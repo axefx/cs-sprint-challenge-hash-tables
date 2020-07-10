@@ -2,7 +2,13 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    cache = dict()
+    result = []
+    for i in a:
+        if i != 0:
+            cache[i] = True
+            if -i in cache:
+                result.append(abs(i))
 
     return result
 
